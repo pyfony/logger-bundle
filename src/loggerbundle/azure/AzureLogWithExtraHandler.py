@@ -12,6 +12,8 @@ class AzureLogWithExtraHandler(AzureLogHandler):
         recordDict = record.__dict__
         extraKeys = ExtraKeysResolver.getExtraKeys(record)
 
+        message.properties['loggerName'] = record.name
+
         for k in extraKeys:
             if k != 'message':
                 message.properties['extra_{}'.format(k)] = str(recordDict[k])
