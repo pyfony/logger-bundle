@@ -1,7 +1,7 @@
 from loggerbundle.azure.AzureLogWithExtraHandler import AzureLogWithExtraHandler
-from loggerbundle.handler.LogHandlerInterface import LogHandlerInterface
+from loggerbundle.handler.HandlerFactoryInterface import HandlerFactoryInterface
 
-class AzureLogHandlerFactory(LogHandlerInterface):
+class AzureLogHandlerFactory(HandlerFactoryInterface):
 
     def __init__(
         self,

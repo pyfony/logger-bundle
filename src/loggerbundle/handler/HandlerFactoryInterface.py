@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from logging import Handler
 
-class LogHandlerInterface(ABC):
+class HandlerFactoryInterface(ABC):
 
     @abstractmethod
     def create(self) -> Handler:

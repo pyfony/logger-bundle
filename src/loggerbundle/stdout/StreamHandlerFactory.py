@@ -1,8 +1,8 @@
 from logging import StreamHandler
 from loggerbundle.extra.ExtraFieldsFormatter import ExtraFieldsFormatter
-from loggerbundle.handler.LogHandlerInterface import LogHandlerInterface
+from loggerbundle.handler.HandlerFactoryInterface import HandlerFactoryInterface
 
-class StreamHandlerFactory(LogHandlerInterface):
+class StreamHandlerFactory(HandlerFactoryInterface):
 
     def __init__(
         self,

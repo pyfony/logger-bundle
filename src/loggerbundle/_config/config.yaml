@@ -10,13 +10,6 @@ services:
       - '%loggerbundle.messageFormat%'
       - '%loggerbundle.dateFormat%'
 
-  loggerbundle.stdout.logHandler:
-    class: logging.StreamHandler
-    factory: ['@loggerbundle.stdout.StreamHandlerFactory', 'create']
-
   loggerbundle.azure.AzureLogHandlerFactory:
     arguments:
       - '%loggerbundle.azure.instrumentationKey%'
-
-  loggerbundle.azure.AzureLogWithExtraHandler:
-    factory: ['@loggerbundle.azure.AzureLogHandlerFactory', 'create']
