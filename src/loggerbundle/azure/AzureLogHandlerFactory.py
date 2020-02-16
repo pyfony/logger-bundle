@@ -9,7 +9,7 @@ class AzureLogHandlerFactory(LogHandlerInterface):
     ):
         self.__instrumentationKey = instrumentationKey
 
-    def __createAzureLogHandler(self):
+    def create(self):
         return AzureLogWithExtraHandler(
             connection_string='InstrumentationKey={}'.format(self.__instrumentationKey)
         )
