@@ -5,8 +5,7 @@ parameters:
     defaultLogLevel: 20 # INFO
 
 services:
-  loggerbundle.loggerFactory:
-    class: loggerbundle.LoggerFactory
+  loggerbundle.LoggerFactory:
     arguments:
       - '%loggerbundle.defaultLogLevel%'
       - !tagged loghandler.factory
