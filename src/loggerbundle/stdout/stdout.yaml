@@ -1,7 +1,0 @@
-services:
-  loggerbundle.stdout.StreamHandlerFactory:
-    arguments:
-      - '%loggerbundle.messageFormat%'
-      - '%loggerbundle.dateFormat%'
-    tags:
-      - 'loghandler.factory'
