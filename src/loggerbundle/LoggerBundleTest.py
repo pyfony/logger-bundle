@@ -21,7 +21,7 @@ class LoggerBundleTest(unittest.TestCase):
 
         kernel = Kernel(
             'test',
-            resolvePath('loggerbundle') + '/LoggerBundleTest',
+            resolvePath('loggerbundle') + '/_config',
             YamlConfigReader()
         )
 
