@@ -178,12 +178,12 @@ description = "Dependency Injection powered framework"
 name = "pyfony"
 optional = false
 python-versions = ">=3.7.3,<3.8.0"
-version = "0.4.0"
+version = "0.4.2"
 
 [package.dependencies]
 console-bundle = ">=0.2.0,<0.3.0"
 injecta = ">=0.6.2,<0.7.0"
-logger-bundle = ">=0.4.0,<0.5.0"
+logger-bundle = ">=0.5.0,<0.6.0"
 
 [[package]]
 category = "main"
@@ -319,7 +319,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "969d02202d03519a8f5eaf353dfe15bfa0e1138d1b0019bcacababed6b7a98e4"
+content-hash = "8576648826a028d39a3da790377366f484c83f6842c6783713f58b8b579b9b1b"
 python-versions = "~3.7.3"
 
 [metadata.files]
@@ -403,8 +403,8 @@ py = [
     {file = "py-1.8.1.tar.gz", hash = "sha256:5e27081401262157467ad6e7f851b7aa402c5852dbcb3dae06768434de5752aa"},
 ]
 pyfony = [
-    {file = "pyfony-0.4.0-py3-none-any.whl", hash = "sha256:e130bf5b0a0380f7f23ef3e333818d2c59a32df0bea57b3a8542c672c09bbdb8"},
-    {file = "pyfony-0.4.0.tar.gz", hash = "sha256:9b932642e8fc21fa40a779a3c5e7b4ce5a4379ff1ff08845779c7bc3614fe3b8"},
+    {file = "pyfony-0.4.2-py3-none-any.whl", hash = "sha256:4bb4e30e56e4e2043d7e5d294c6b126161c9a57c33a3fbbeddedb7956dce48e5"},
+    {file = "pyfony-0.4.2.tar.gz", hash = "sha256:10175279002a8b9c4847879952398465b3c5a6aca417a677be15e1c91d62d14d"},
 ]
 pyfony-bundles = [
     {file = "pyfony-bundles-0.2.0.tar.gz", hash = "sha256:72840289ba6ca50292158a73a90065c300e5b95a2e53ca1a7ad553708f51c70d"},
