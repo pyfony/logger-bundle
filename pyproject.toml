@@ -26,8 +26,6 @@ packages = [
 [tool.poetry.dependencies]
 python = "~3.7.3"
 colorlog = "4.0.*"
-opencensus = "0.7.*"
-opencensus-ext-azure = "1.0.*"
 pyfony-bundles = "0.2.*"
 
 [tool.poetry.dev-dependencies]

@@ -1,6 +1,0 @@
-services:
-  loggerbundle.azure.AzureLogHandlerFactory:
-    arguments:
-      - '%loggerbundle.azure.instrumentationKey%'
-    tags:
-      - 'loghandler.factory'

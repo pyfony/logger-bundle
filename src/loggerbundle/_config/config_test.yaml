@@ -1,8 +1,2 @@
 imports:
   - '@loggerbundle/stdout/stdout.yaml'
-  - '@loggerbundle/azure/azure.yaml'
-
-parameters:
-  loggerbundle:
-    azure:
-      instrumentationKey: ''
