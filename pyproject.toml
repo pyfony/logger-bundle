@@ -24,14 +24,14 @@ packages = [
 ]
 
 [tool.poetry.dependencies]
-python = "~3.7.3"
-colorlog = "4.0.*"
-pyfony-bundles = "^0.3.0"
+python = "^3.7"
+colorlog = "^4.0"
+pyfony-bundles = "^0.3.2"
 
 [tool.poetry.dev-dependencies]
-pylint = "2.4.*"
-pytest = "5.2.*"
-pyfony-core = "^0.7.0"
+pylint = "^2.4"
+pytest = "^5.2"
+pyfony-core = "^0.7.1"
 
 [tool.poetry.plugins."pyfony.bundle"]
 create = "loggerbundle.LoggerBundle:LoggerBundle"
