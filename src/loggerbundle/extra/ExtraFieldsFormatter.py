@@ -2,30 +2,30 @@ import colorlog
 from logging import PercentStyle
 from loggerbundle.extra.ExtraKeysResolver import ExtraKeysResolver
 
-class ExtraFieldsFormatter(colorlog.ColoredFormatter):
 
+class ExtraFieldsFormatter(colorlog.ColoredFormatter):
     def __init__(self, *args, **kwargs):
-        self.__origFmt = args[0]
+        self.__orig_fmt = args[0]
 
         super().__init__(*args, **kwargs)
 
     def format(self, record):
-        extraKeys = ExtraKeysResolver.getExtraKeys(record)
+        extra_keys = ExtraKeysResolver.get_extra_keys(record)
 
-        if not extraKeys:
+        if not extra_keys:
             return super().format(record)
 
-        def mapPlaceholder(fieldName):
-            return '{}: %({})s'.format(fieldName, fieldName) # pylint: disable = duplicate-string-formatting-argument
+        def map_placeholder(field_name):
+            return "{}: %({})s".format(field_name, field_name)
 
-        extraKeysPlaceholders = list(map(mapPlaceholder, extraKeys))
+        extra_keys_placeholders = list(map(map_placeholder, extra_keys))
 
-        self.__setFormat(self.__origFmt + '\n' + '{' + ', '.join(extraKeysPlaceholders) + '}')
+        self.__set_format(self.__orig_fmt + "\n" + "{" + ", ".join(extra_keys_placeholders) + "}")
         formated = super().format(record)
-        self.__setFormat(self.__origFmt)
+        self.__set_format(self.__orig_fmt)
 
         return formated
 
-    def __setFormat(self, fmt: str):
+    def __set_format(self, fmt: str):
         self._fmt = fmt
         self._style = PercentStyle(self._fmt)

@@ -2,21 +2,21 @@ from logging import getLogger
 from typing import List
 from loggerbundle.handler.HandlerFactoryInterface import HandlerFactoryInterface
 
-class LoggerFactory:
 
+class LoggerFactory:
     def __init__(
         self,
-        defaultLogLevel: int,
-        handlerFactories: List[HandlerFactoryInterface],
+        default_log_level: int,
+        handler_factories: List[HandlerFactoryInterface],
     ):
-        self.__defaultLogLevel = defaultLogLevel
-        self.__handlerFactories = handlerFactories
+        self.__default_log_level = default_log_level
+        self.__handler_factories = handler_factories
 
-    def create(self, loggerName: str, logLevel: int = None):
-        logger = getLogger(loggerName)
-        logger.setLevel(logLevel if logLevel is not None else self.__defaultLogLevel)
+    def create(self, logger_name: str, log_level: int = None):
+        logger = getLogger(logger_name)
+        logger.setLevel(log_level if log_level is not None else self.__default_log_level)
 
-        logger.handlers = list(map(lambda handlerFactory: handlerFactory.create(), self.__handlerFactories))
+        logger.handlers = list(map(lambda handler_factory: handler_factory.create(), self.__handler_factories))
         logger.propagate = False
 
         return logger
